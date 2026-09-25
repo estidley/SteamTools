@@ -48,4 +48,4 @@ foreach ($r in $Response.appList.apps) {
 }
 
 
-$PSOB | Sort-Object AppId | Out-File -FilePath .\SteamAppIds.json -Force
+$cap | Sort-Object AppId | ConvertTo-Json | Out-File -FilePath .\SteamAppIds.json -Force
